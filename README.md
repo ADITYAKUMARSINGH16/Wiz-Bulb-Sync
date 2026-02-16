@@ -2,6 +2,10 @@
 
 This application synchronizes your computer screen's colors with your WiZ smart bulb in real-time, creating an immersive ambient lighting experience for movies, games, and videos.
 
+### **Created by Aditya Kumar Singh**
+
+---
+
 ## Features
 -   **Real-Time Sync**: Updates your bulb 10 times per second to match on-screen action.
 -   **Smart Color Match**: Uses "Dominant" color logic to ignore boring gray/black backgrounds and find the *real* color.
@@ -17,26 +21,27 @@ This application synchronizes your computer screen's colors with your WiZ smart 
 ### 1. Prerequisites
 -   **Python 3.10+** installed on your system.
 -   A **WiZ Smart Bulb** connected to the same Wi-Fi network as your PC.
--   To find your Bulb's IP:
-    1.  Open the **WiZ App** on your phone.
-    2.  Tap on the bulb -> **Settings**.
-    3.  Scroll down to see the **IP Address** (e.g., `192.168.1.15`).
 
-### 2. Installation
-1.  Open a terminal in this folder.
-2.  Install the required libraries:
+### 2. Finding Your Bulb IP (New Tool!)
+I have included a tool to make this easy:
+1.  Double-click **`find_bulb.bat`**  or (in terminal **`.\find_bulb.bat`**)in this folder.
+2.  Click **"Scan Network"**.
+3.  Click on your bulb in the list to **copy its IP Address**.
+
+### 3. Installation
+1.  Double-click **`run.bat`** or (in terminal **`.\run.bat`**) to start safely.
+2.  Or manually install requirements:
     ```bash
     pip install -r requirement.txt
     ```
-    *(Note: If you are using the included `run.bat`, it may handle the virtual environment for you).*
 
 ---
 
 ## How to Run
 
-Simply double-click **`run.bat`** or **'.\run.bat'** to start the application.
+Simply double-click **`run.bat`** or (in terminal **`.\run.bat`**) to start the application.
 
-Or, run via command line:
+Or via terminal:
 ```bash
 python main.py
 ```
@@ -45,21 +50,19 @@ python main.py
 
 ## Usage Guide
 
-1.  **Bulb IP**: Enter the IP address of your bulb (from the WiZ app).
+1.  **Bulb IP**: Paste the IP you found earlier.
 2.  **Color Logic**:
-    -   **Dominant (Recommended)**: Finds the most frequent "colorful" pixel. great for games and movies with dark backgrounds.
-    -   **Average**: Mixes all colors together. Good for soft, uniform lighting.
+    -   **Dominant (Recommended)**: Finds the most frequent "colorful" pixel. great for games.
+    -   **Average**: Mixes all colors together. Good for soft lighting.
 3.  **Silky Smooth Mode**:
-    -   **ON**: Colors fade gently into each other. Best for movies.
-    -   **OFF**: Instant updates. Best for fast-paced competitive games.
+    -   **ON**: Colors fade gently. Best for movies.
+    -   **OFF**: Instant updates. Best for competitive gaming.
 4.  **Vibrant Colors**:
     -   **ON**: Boosts saturation (Red becomes *Red*).
-    -   **OFF**: Accurate colors (Red might look like clay/brown depending on the screen).
-5.  **Master Brightness**: Controls the maximum brightness of the bulb.
-6.  **Select Screen Area**:
-    -   Click the button.
+    -   **OFF**: Accurate colors.
+5.  **Select Screen Area**:
+    -   Click "Select Screen Area".
     -   Drag a box over the part of the screen you want to capture.
-    -   Only that area will be used to control the light.
     -   Click "Reset" to go back to full screen.
 
 ## Troubleshooting
